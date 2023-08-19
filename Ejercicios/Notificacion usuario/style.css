@@ -1,24 +1,30 @@
 .container{
     background-color: red;
-    width: 500px;
+    max-width: 500px;
     height: 50px;
     margin: 10px;
     padding: 10px;
     display: flex;
-
 }
 
 .description{
     width: 80%;
 }
 .avatar{
-    border-radius: 100%;
     width: 10%;
     background-color: aqua;
     display: flex;
     justify-content: center;
     place-items: center;
 }
+
+.avatar .image{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 100%;
+}
+
 .image{
     
 }
