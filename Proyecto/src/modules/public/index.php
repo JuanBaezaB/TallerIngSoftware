@@ -1,38 +1,37 @@
 <?php
 include_once '../../auth/auth.php';
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     logout();
 }
-
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
-</head>
-
-<body>
-
-    <h1>Bienvenido a la Página de Inicio</h1>
-    <p>Contenido público visible para todos los usuarios.</p>
-
-    <?php if (is_authenticated()) : ?>
-        <p>Contenido privado visible solo para usuarios autenticados.</p>
-        <form name="delete" method="post">
-            <button type="submit" >Cerrar Sesión</button>
-        </form>
-      
-    <?php else : ?>
-        <a href="../../auth/login.php">Iniciar Sesión</a>
-    <?php endif; ?>
+<!-- head -->
+<?php
+$title = 'Página de Inicio';
+$css = '<link rel="stylesheet" href="../../../assets/css/style.css">';
+include_once '../../common/public/header.php';
+?>
 
 
+<!-- Content -->
+<h1>Bienvenido a la Página de Inicio</h1>
+<p>Contenido público visible para todos los usuarios.</p>
 
-</body>
+<?php if (is_authenticated()) : ?>
+    <p>Contenido privado visible solo para usuarios autenticados.</p>
+    <form name="delete" method="post">
+        <button type="submit">Cerrar Sesión</button>
+    </form>
 
-</html>
+<?php else : ?>
+    <a href="../../auth/login.php">Iniciar Sesión</a>
+<?php endif; ?>
+
+
+
+<!-- scripts -->
+<?php
+$script = '<script src="../../../assets/js/main.js"></script>';
+include_once '../../common/public/footer.php';
+?>

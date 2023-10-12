@@ -26,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-
     <div class="form">
         <h1>Inicia Sesión</h1>
         <form action="" method="post" name="login">
