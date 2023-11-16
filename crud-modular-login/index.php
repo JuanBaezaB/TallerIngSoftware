@@ -1,9 +1,10 @@
 <?php
-
-    // Pequeña lógica para capturar la pagina que queremos abrir
-    $pagina = isset($_GET['p']) ? strtolower($_GET['p']) : 'home';
-
     session_start();
+    
+    // Pequeña lógica para capturar la pagina que queremos abrir
+    $pagina = strtolower($_GET['pagina']) ?? 'home';
+
+   
 
 
     // El fragmento de html que contiene la cabecera de nuestra web

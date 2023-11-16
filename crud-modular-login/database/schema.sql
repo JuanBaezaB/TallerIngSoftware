@@ -1,8 +1,8 @@
--- Crear la base de datos "repuestos" con cotejamiento utf8_spanish_ci
-CREATE DATABASE IF NOT EXISTS repuestos CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
+-- Crear la base de datos "register" con cotejamiento utf8_spanish_ci
+CREATE DATABASE IF NOT EXISTS register CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci;
 
--- Usar la base de datos "repuestos"
-USE repuestos;
+-- Usar la base de datos "register"
+USE register;
 
 -- Crear la tabla "marcas"
 CREATE TABLE IF NOT EXISTS marcas (
