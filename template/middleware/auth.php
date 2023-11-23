@@ -14,7 +14,6 @@ if (!isset($_SESSION["username"])) {
 } else {
     $username = $_SESSION["username"];
     $user = get_user_by_username($username);
-    // $result = mysqli_query($connection, $sql);
 
     if (!$user) {
         session_destroy();
